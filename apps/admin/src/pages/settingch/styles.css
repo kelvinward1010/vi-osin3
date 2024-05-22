@@ -1,0 +1,166 @@
+.table-main .ant-table-thead th{
+    background-color: blue !important;
+    color: white !important;
+    text-align: left;
+}
+
+.table-main thead{
+    height: 20px !important;
+}
+.ant-table-content .ant-table-row{
+    height: 30px;
+}
+.table-main td {
+    border: 1px solid rgba(0, 0, 1,0.2);
+    color: #224170;
+}
+.table-main td text{
+    color: #224170;
+}
+.table-main .action{
+    display: flex;
+    justify-content: center;
+}
+.table-main .action span{
+    padding: 0 3px;
+}
+
+.table-main .action .edit-main-push{
+    color: blue;
+}
+.table-main .action .delete-setting-main{
+    color: red;
+    cursor: pointer;
+}
+
+.ant-modal-content .ant-modal-header{
+    background-color: blue;
+}
+
+.ant-modal-content .ant-modal-header .ant-modal-title{
+    color: white;
+    font-size: large;
+}
+
+.ant-modal-content .ant-modal-close-x{
+    color: white;
+}
+
+.ant-collapse-item .edit-main-push{
+    color: blue;
+}
+
+.ant-collapse-item .delete-setting-main{
+    color: red;
+    cursor: pointer;
+}
+
+.ant-modal-content,.ant-modal{
+    border-radius: 20px !important;
+    border-top-left-radius: 20px !important;
+    border-bottom-right-radius: 20px !important;
+}
+
+.input-modal-setting-main{
+    border: none;
+    border-bottom:1px solid #000000 !important;
+    width: 100%;
+}
+.ant-modal-body a{
+    font-family: arial;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    color: #224170;
+}
+
+.ant-modal-body .ant-row{
+    margin-top: 20px;
+    justify-items: center;
+}
+
+.ant-modal-body .languages-setting-main{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-style: normal;
+    font-weight: 700;
+    font-family: arial;
+    font-size: 16px;
+    line-height: 19px;
+    color: #000000;
+}
+.ant-modal-body .tv{
+    background: rgba(0, 163, 255, 0.5) !important;
+    width: 100px !important;
+    height: 36px !important;
+}
+.ant-modal-body .lg{
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+}
+.ant-modal-body .lg span{
+    text-align: center !important;
+}
+
+.ant-modal-body .add-tin{
+    background: #2076BE;
+    border-radius: 10px;
+    width: 100px;
+    height: 25px;
+}
+
+.ant-modal-body .add-tin a{
+    color: white;
+    font-style: normal;
+    font-family: arial;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+}
+
+.ant-modal-body .add-tin span{
+    border-radius: 2px;
+    margin-left: 5px;
+    background-color: white;
+    color: #2076BE;
+}
+
+.ant-modal-body .cnt-tukhoa{
+    width: 100%;
+}
+
+.ant-modal-body .cnt-tukhoa .cnt-tukhoa-space{
+    margin-right: 3%;
+}
+.ant-modal-body .cnt-tukhoa .exit-tukhoa{
+    color: red;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.ant-modal-body .cnt-tukhoa .link-tukhoa{
+    color: #005AB0;
+    cursor: pointer;
+}
+
+.ant-modal-body .cnt-tukhoa .target-blank{
+    color: #224170;
+    cursor: pointer;
+    font-weight: 300 !important;
+}
+
+.ant-modal-body .cnt-tukhoa .date-tukhoa{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+    font-family: arial;
+}
+
+.ant-modal-body .cnt-tukhoa .tukhoa-list{
+    margin-bottom: -25px !important;
+}

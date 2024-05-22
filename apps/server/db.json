@@ -1,0 +1,374 @@
+{
+  "cartoons": [],
+  "pipeline": [
+    {
+      "name": "url_input",
+      "params": {
+        "url": "https://dantri.com.vn"
+      }
+    },
+    {
+      "name": "get_urls",
+      "params": {
+        "by": "css",
+        "expr": "ol.menu-wrap li:not([class]) a[href^='/'], ol.menu-wrap li.has-child ol.submenu li a[href^='/']",
+        "origin": "https://dantri.com.vn",
+        "wait": 5
+      }
+    },
+    {
+      "name": "foreach",
+      "params": {
+        "loop": true,
+        "actions": [
+          {
+            "name": "get_urls",
+            "params": {
+              "by": "css",
+              "expr": "div.main .article-title a",
+              "origin": "https://dantri.com.vn"
+            }
+          },
+          {
+            "name": "foreach",
+            "params": {
+              "loop": true,
+              "actions": [
+                {
+                  "name": "get_post_info",
+                  "params": {
+                    "by": "css",
+                    "title_expr": ".title-page",
+                    "author_expr": ".author-name a b",
+                    "time_expr": ".author-time",
+                    "content_expr": ".singular-content"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "pipeline-input": [
+    {
+      "action_type": "input",
+      "display_name": "URL Input",
+      "name": "url_input",
+      "param_infos": [
+        {
+          "default_val": "",
+          "display_name": "URL",
+          "name": "url",
+          "options": [],
+          "val_type": "str",
+          "validators": ["required"],
+          "z_index": 0
+        }
+      ],
+      "readme": "Đầu vào địa chỉ URL",
+      "z_index": 0
+    },
+    {
+      "action_type": "common",
+      "display_name": "Goto",
+      "name": "goto",
+      "param_infos": [],
+      "readme": "Mở địa chỉ URL",
+      "z_index": 1
+    },
+    {
+      "action_type": "common",
+      "display_name": "Select",
+      "name": "select",
+      "param_infos": [
+        {
+          "default_val": "css",
+          "display_name": "Select by",
+          "name": "by",
+          "options": ["css", "xpath"],
+          "val_type": "str",
+          "validators": ["required"],
+          "z_index": 0
+        },
+        {
+          "default_val": "",
+          "display_name": "Expression",
+          "name": "expr",
+          "options": [],
+          "val_type": "str",
+          "validators": ["required"],
+          "z_index": 0
+        }
+      ],
+      "readme": "Lấy danh sách các thành phần từ thành phần gốc",
+      "z_index": 2
+    },
+    {
+      "action_type": "common",
+      "display_name": "Get URLs",
+      "name": "get_urls",
+      "param_infos": [
+        {
+          "default_val": "css",
+          "display_name": "Select by",
+          "name": "by",
+          "options": ["css", "xpath"],
+          "val_type": "str",
+          "validators": ["required"],
+          "z_index": 0
+        },
+        {
+          "default_val": "",
+          "display_name": "Expression",
+          "name": "expr",
+          "options": [],
+          "val_type": "str",
+          "validators": ["required"],
+          "z_index": 0
+        },
+        {
+          "default_val": "",
+          "display_name": "Origin address",
+          "name": "origin",
+          "options": [],
+          "val_type": "str",
+          "validators": [],
+          "z_index": 0
+        }
+      ],
+      "readme": "Lấy danh sách các địa chỉ URLs trong một trang",
+      "z_index": 3
+    },
+    {
+      "action_type": "common",
+      "display_name": "Get Post Infomation",
+      "name": "get_post_info",
+      "param_infos": [
+        {
+          "default_val": "css",
+          "display_name": "Select by",
+          "name": "by",
+          "options": ["css", "xpath"],
+          "val_type": "str",
+          "validators": ["required"],
+          "z_index": 0
+        },
+        {
+          "default_val": "",
+          "display_name": "Title Expression",
+          "name": "title_expr",
+          "options": [],
+          "val_type": "str",
+          "validators": ["required"],
+          "z_index": 0
+        },
+        {
+          "default_val": "",
+          "display_name": "Author Expression",
+          "name": "author_expr",
+          "options": [],
+          "val_type": "str",
+          "validators": ["required"],
+          "z_index": 0
+        },
+        {
+          "default_val": "",
+          "display_name": "Time Expression",
+          "name": "time_expr",
+          "options": [],
+          "val_type": "str",
+          "validators": ["required"],
+          "z_index": 0
+        },
+        {
+          "default_val": "",
+          "display_name": "Content Expression",
+          "name": "content_expr",
+          "options": [],
+          "val_type": "str",
+          "validators": ["required"],
+          "z_index": 0
+        }
+      ],
+      "readme": "Lấy thông tin bài viết",
+      "z_index": 4
+    },
+    {
+      "action_type": "common",
+      "display_name": "Get Attribute",
+      "name": "get_attr",
+      "param_infos": [
+        {
+          "default_val": "",
+          "display_name": "Attribute name",
+          "name": "attr_name",
+          "options": [],
+          "val_type": "str",
+          "validators": ["required"],
+          "z_index": 0
+        }
+      ],
+      "readme": "Lấy thuộc tính của một thành phần",
+      "z_index": 5
+    }
+  ],
+  "get_action_infos": {
+    "Payload": [
+      {
+        "action_type": "input",
+        "display_name": "URL Input",
+        "name": "url_input",
+        "param_infos": [
+          {
+            "default_val": "",
+            "display_name": "URL",
+            "name": "url",
+            "val_type": "str",
+            "validators": ["required"],
+            "z_index": 0
+          }
+        ],
+        "readme": "Đầu vào địa chỉ URL",
+        "z_index": 0
+      },
+      {
+        "action_type": "common",
+        "display_name": "Goto",
+        "name": "goto",
+        "param_infos": [],
+        "readme": "Mở địa chỉ URL",
+        "z_index": 1
+      },
+      {
+        "action_type": "common",
+        "display_name": "Select",
+        "name": "select",
+        "param_infos": [
+          {
+            "default_val": "css",
+            "display_name": "Select by",
+            "name": "by",
+            "options": ["css", "xpath"],
+            "val_type": "str",
+            "validators": ["required"],
+            "z_index": 0
+          },
+          {
+            "default_val": "",
+            "display_name": "Expression",
+            "name": "expr",
+            "val_type": "str",
+            "validators": ["required"],
+            "z_index": 0
+          }
+        ],
+        "readme": "Lấy danh sách các thành phần từ thành phần gốc",
+        "z_index": 2
+      },
+      {
+        "action_type": "common",
+        "display_name": "Get URLs",
+        "name": "get_urls",
+        "param_infos": [
+          {
+            "default_val": "css",
+            "display_name": "Select by",
+            "name": "by",
+            "options": ["css", "xpath"],
+            "val_type": "str",
+            "validators": ["required"],
+            "z_index": 0
+          },
+          {
+            "default_val": "",
+            "display_name": "Expression",
+            "name": "expr",
+            "val_type": "str",
+            "validators": ["required"],
+            "z_index": 0
+          },
+          {
+            "default_val": "",
+            "display_name": "Origin address",
+            "name": "origin",
+            "val_type": "str",
+            "validators": [],
+            "z_index": 0
+          }
+        ],
+        "readme": "Lấy danh sách các địa chỉ URLs trong một trang",
+        "z_index": 3
+      },
+      {
+        "action_type": "common",
+        "display_name": "Get News Infomation",
+        "name": "get_news_info",
+        "param_infos": [
+          {
+            "default_val": "css",
+            "display_name": "Select by",
+            "name": "by",
+            "options": ["css", "xpath"],
+            "val_type": "str",
+            "validators": ["required"],
+            "z_index": 0
+          },
+          {
+            "default_val": "",
+            "display_name": "Title Expression",
+            "name": "title_expr",
+            "val_type": "str",
+            "validators": ["required"],
+            "z_index": 0
+          },
+          {
+            "default_val": "",
+            "display_name": "Author Expression",
+            "name": "author_expr",
+            "val_type": "str",
+            "validators": ["required"],
+            "z_index": 0
+          },
+          {
+            "default_val": "",
+            "display_name": "Time Expression",
+            "name": "time_expr",
+            "val_type": "str",
+            "validators": ["required"],
+            "z_index": 0
+          },
+          {
+            "default_val": "",
+            "display_name": "Content Expression",
+            "name": "content_expr",
+            "val_type": "str",
+            "validators": ["required"],
+            "z_index": 0
+          }
+        ],
+        "readme": "Lấy thông tin bài viết",
+        "z_index": 4
+      },
+      {
+        "action_type": "common",
+        "display_name": "Get Attribute",
+        "name": "get_attr",
+        "param_infos": [
+          {
+            "default_val": "",
+            "display_name": "Attribute name",
+            "name": "attr_name",
+            "val_type": "str",
+            "validators": ["required"],
+            "z_index": 0
+          }
+        ],
+        "readme": "Lấy thuộc tính của một thành phần",
+        "z_index": 5
+      }
+    ],
+    "Success": true
+  }
+}

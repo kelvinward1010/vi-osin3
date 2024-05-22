@@ -1,0 +1,45 @@
+{
+  "name": "@aiacademy/web-tokens",
+  "version": "0.0.1",
+  "description": "",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/types/build/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/types/build/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    },
+    "./json/*": "./dist/json/*",
+    "./css/*": "./dist/css/*",
+    "./less/*": "./dist/less/*"
+  },
+  "scripts": {
+    "build": "run-s build:*",
+    "build:assets": "ts-node --skip-project scripts/index.ts",
+    "build:js": "tsup build/index.ts --format esm,cjs",
+    "build:types": "tsc -b",
+    "build:clean": "rm -rf build",
+    "dev": "run-s dev:*",
+    "dev:assets": "ts-node --skip-project scripts/index.ts",
+    "dev:js": "tsup build/index.ts --format esm,cjs --watch",
+    "clean": "rm -rf .turbo node_modules dist *.tsbuildinfo build",
+    "lint": "tsc"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "@aiacademy/eslint-config-custom": "^0.0.1",
+    "@aiacademy/typescript-configs": "^0.0.1",
+    "npm-run-all": "^4.1.5",
+    "ts-node": "^10.9.1",
+    "tsup": "^6.2.3",
+    "typescript": "^4.8.4"
+  },
+  "files": [
+    "dist"
+  ]
+}

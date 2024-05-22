@@ -1,0 +1,781 @@
+{
+  "data": [
+    {
+      "_id": "635f683d0867c102b8b8bbc3",
+      "name": "",
+      "pipe_data": [
+        {
+          "name": "click",
+          "params": [
+            {
+              "name": "method",
+              "require": true,
+              "value": "css",
+              "data_list": ["css", "xpath"],
+              "type": "enum"
+            },
+            {
+              "name": "selector",
+              "require": true,
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "t_sleep",
+              "require": false,
+              "type": "number",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "name": "submit",
+          "params": [
+            {
+              "name": "selector",
+              "require": true,
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "value",
+              "require": true,
+              "type": "string",
+              "value": ""
+            }
+          ]
+        },
+        {
+          "name": "goto",
+          "params": [
+            {
+              "name": "link",
+              "require": true,
+              "type": "string",
+              "value": ""
+            }
+          ]
+        },
+        {
+          "name": "keyboard_press",
+          "params": [
+            {
+              "name": "key",
+              "require": true,
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "t_sleep",
+              "require": false,
+              "type": "number",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "name": "start_loop",
+          "params": [
+            {
+              "name": "t_sleep",
+              "require": true,
+              "type": "number",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "name": "scroll",
+          "params": [
+            {
+              "name": "wait_time",
+              "require": false,
+              "type": "number",
+              "value": 1
+            },
+            {
+              "name": "nb_scroll",
+              "require": false,
+              "type": "number",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "name": "start_visit",
+          "params": [
+            {
+              "name": "link",
+              "require": true,
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "depth",
+              "require": true,
+              "type": "number",
+              "value": 1
+            },
+            {
+              "name": "save_duplicate",
+              "require": false,
+              "type": "checkbox",
+              "value": false
+            }
+          ]
+        },
+        {
+          "name": "end_visit",
+          "params": []
+        },
+        {
+          "name": "end_visit",
+          "params": []
+        },
+        {
+          "name": "end_loop",
+          "params": []
+        }
+      ],
+      "created_at": 1667196989,
+      "status": 0,
+      "active": 0,
+      "state": "STOP"
+    },
+    {
+      "_id": "6343c5150e237ea77d6fb84c",
+      "name": "fsafsa",
+      "pipe_data": [
+        {
+          "name": "start_visit",
+          "params": [
+            {
+              "name": "link",
+              "require": true,
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "depth",
+              "require": true,
+              "type": "number",
+              "value": 1
+            },
+            {
+              "name": "save_duplicate",
+              "require": false,
+              "type": "checkbox",
+              "value": false
+            }
+          ]
+        },
+        {
+          "name": "click",
+          "params": [
+            {
+              "name": "method",
+              "require": true,
+              "value": "css",
+              "data_list": ["css", "xpath"],
+              "type": "enum"
+            },
+            {
+              "name": "selector",
+              "require": true,
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "t_sleep",
+              "require": false,
+              "type": "number",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "name": "submit",
+          "params": [
+            {
+              "name": "selector",
+              "require": true,
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "value",
+              "require": true,
+              "type": "string",
+              "value": ""
+            }
+          ]
+        },
+        {
+          "name": "goto",
+          "params": [
+            {
+              "name": "link",
+              "require": true,
+              "type": "string",
+              "value": ""
+            }
+          ]
+        },
+        {
+          "name": "keyboard_press",
+          "params": [
+            {
+              "name": "key",
+              "require": true,
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "t_sleep",
+              "require": false,
+              "type": "number",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "name": "end_visit",
+          "params": []
+        }
+      ],
+      "created_at": 1665385749,
+      "status": 0,
+      "active": 0,
+      "state": "STOP"
+    },
+    {
+      "_id": "633a7f578b7c3f005dde404e",
+      "name": "test",
+      "pipe_data": [
+        {
+          "name": "goto",
+          "params": [
+            {
+              "name": "link",
+              "require": true,
+              "type": "string",
+              "value": ""
+            }
+          ]
+        },
+        {
+          "name": "keyboard_press",
+          "params": [
+            {
+              "name": "key",
+              "require": true,
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "t_sleep",
+              "require": false,
+              "type": "number",
+              "value": 1
+            }
+          ]
+        }
+      ],
+      "created_at": 1664778071,
+      "status": 0,
+      "active": 0,
+      "state": "STOP"
+    },
+    {
+      "_id": "62dd0a40cd2aaef5ef5c706d",
+      "name": "mywork.com.vn",
+      "pipe_data": [
+        {
+          "name": "start-loop",
+          "params": [
+            {
+              "name": "t_sleep",
+              "require": true,
+              "type": "number",
+              "value": 600000
+            }
+          ]
+        },
+        {
+          "name": "start-visit",
+          "params": [
+            {
+              "name": "link",
+              "require": true,
+              "type": "string",
+              "value": "https://mywork.com.vn/tuyen-dung?q="
+            },
+            {
+              "name": "depth",
+              "require": true,
+              "type": "number",
+              "value": 5
+            },
+            {
+              "name": "domain",
+              "require": true,
+              "type": "string",
+              "value": "https://mywork.com.vn"
+            },
+            {
+              "name": "checkExist",
+              "require": false,
+              "type": "bool",
+              "value": false
+            }
+          ]
+        },
+        {
+          "name": "storage",
+          "params": [
+            {
+              "name": "name",
+              "require": true,
+              "type": "string",
+              "value": "hbase"
+            }
+          ]
+        },
+        {
+          "name": "end",
+          "params": []
+        },
+        {
+          "name": "end",
+          "params": []
+        }
+      ],
+      "created_at": 1658653313,
+      "status": 1,
+      "active": 0,
+      "state": "STOP",
+      "host": "http://neat-horse-93.abc.aicorporation.vn:3333"
+    },
+    {
+      "_id": "62dd096dcd2aaef5ef5c6e27",
+      "name": "www.vieclamtot.com",
+      "pipe_data": [
+        {
+          "name": "start-loop",
+          "params": [
+            {
+              "name": "t_sleep",
+              "require": true,
+              "type": "number",
+              "value": 600000
+            }
+          ]
+        },
+        {
+          "name": "start-visit",
+          "params": [
+            {
+              "name": "link",
+              "require": true,
+              "type": "string",
+              "value": "https://www.vieclamtot.com"
+            },
+            {
+              "name": "depth",
+              "require": true,
+              "type": "number",
+              "value": 5
+            },
+            {
+              "name": "domain",
+              "require": true,
+              "type": "string",
+              "value": "https://www.vieclamtot.com"
+            },
+            {
+              "name": "checkExist",
+              "require": false,
+              "type": "bool",
+              "value": false
+            }
+          ]
+        },
+        {
+          "name": "storage",
+          "params": [
+            {
+              "name": "name",
+              "require": true,
+              "type": "string",
+              "value": "hbase"
+            }
+          ]
+        },
+        {
+          "name": "end",
+          "params": []
+        },
+        {
+          "name": "end",
+          "params": []
+        }
+      ],
+      "created_at": 1658653037,
+      "status": 0,
+      "active": 0,
+      "state": "STOP",
+      "host": "http://ancient-moose-67.abc.aicorporation.vn:3333"
+    },
+    {
+      "_id": "62dd08bccd2aaef5ef5c6c2a",
+      "name": "vieclam24h.vn",
+      "pipe_data": [
+        {
+          "name": "start-loop",
+          "params": [
+            {
+              "name": "t_sleep",
+              "require": true,
+              "type": "number",
+              "value": 600000
+            }
+          ]
+        },
+        {
+          "name": "start-visit",
+          "params": [
+            {
+              "name": "link",
+              "require": true,
+              "type": "string",
+              "value": "https://vieclam24h.vn/tim-kiem-viec-lam-nhanh?"
+            },
+            {
+              "name": "depth",
+              "require": true,
+              "type": "number",
+              "value": 5
+            },
+            {
+              "name": "domain",
+              "require": true,
+              "type": "string",
+              "value": "https://vieclam24h.vn"
+            },
+            {
+              "name": "checkExist",
+              "require": false,
+              "type": "bool",
+              "value": false
+            }
+          ]
+        },
+        {
+          "name": "storage",
+          "params": [
+            {
+              "name": "name",
+              "require": true,
+              "type": "string",
+              "value": "hbase"
+            }
+          ]
+        },
+        {
+          "name": "end",
+          "params": []
+        },
+        {
+          "name": "end",
+          "params": []
+        }
+      ],
+      "created_at": 1658652860,
+      "status": 2,
+      "active": 0,
+      "state": "RUN",
+      "host": "http://slippery-swan-17.abc.aicorporation.vn:3333"
+    },
+    {
+      "_id": "62dd067ccd2aaef5ef5c656b",
+      "name": "timviec365.vn",
+      "pipe_data": [
+        {
+          "name": "start-loop",
+          "params": [
+            {
+              "name": "t_sleep",
+              "require": true,
+              "type": "number",
+              "value": 600000
+            }
+          ]
+        },
+        {
+          "name": "start-visit",
+          "params": [
+            {
+              "name": "link",
+              "require": true,
+              "type": "string",
+              "value": "https://timviec365.vn/tin-tuyen-dung-viec-lam.html"
+            },
+            {
+              "name": "depth",
+              "require": true,
+              "type": "number",
+              "value": 5
+            },
+            {
+              "name": "domain",
+              "require": true,
+              "type": "string",
+              "value": "https://timviec365.vn"
+            },
+            {
+              "name": "checkExist",
+              "require": false,
+              "type": "bool",
+              "value": false
+            }
+          ]
+        },
+        {
+          "name": "storage",
+          "params": [
+            {
+              "name": "name",
+              "require": true,
+              "type": "string",
+              "value": "hbase"
+            }
+          ]
+        },
+        {
+          "name": "end",
+          "params": []
+        },
+        {
+          "name": "end",
+          "params": []
+        }
+      ],
+      "created_at": 1658652284,
+      "status": 0,
+      "active": 0,
+      "state": "STOP",
+      "host": "http://big-yak-2.abc.aicorporation.vn:3333"
+    },
+    {
+      "_id": "62d90d54cd2aaef5ef54dd3c",
+      "name": "timviecnhanh.com",
+      "pipe_data": [
+        {
+          "name": "start-loop",
+          "params": [
+            {
+              "name": "t_sleep",
+              "require": true,
+              "type": "number",
+              "value": 600000
+            }
+          ]
+        },
+        {
+          "name": "start-visit",
+          "params": [
+            {
+              "name": "link",
+              "require": true,
+              "type": "string",
+              "value": "https://timviecnhanh.com/vieclam/timkiem?"
+            },
+            {
+              "name": "depth",
+              "require": true,
+              "type": "number",
+              "value": 5
+            },
+            {
+              "name": "domain",
+              "require": true,
+              "type": "string",
+              "value": "https://timviecnhanh.com"
+            },
+            {
+              "name": "checkExist",
+              "require": false,
+              "type": "bool",
+              "value": false
+            }
+          ]
+        },
+        {
+          "name": "storage",
+          "params": [
+            {
+              "name": "name",
+              "require": true,
+              "type": "string",
+              "value": "hbase"
+            }
+          ]
+        },
+        {
+          "name": "end",
+          "params": []
+        },
+        {
+          "name": "end",
+          "params": []
+        }
+      ],
+      "created_at": 1658391892,
+      "status": 0,
+      "active": 0,
+      "state": "STOP",
+      "host": "http://bad-bird-29.abc.aicorporation.vn:3333"
+    },
+    {
+      "_id": "62d90cffcd2aaef5ef54dce1",
+      "name": "careerlink",
+      "pipe_data": [
+        {
+          "name": "start-loop",
+          "params": [
+            {
+              "name": "t_sleep",
+              "require": true,
+              "type": "number",
+              "value": 600000
+            }
+          ]
+        },
+        {
+          "name": "start-visit",
+          "params": [
+            {
+              "name": "link",
+              "require": true,
+              "type": "string",
+              "value": "https://www.careerlink.vn/vieclam/list"
+            },
+            {
+              "name": "depth",
+              "require": true,
+              "type": "number",
+              "value": 5
+            },
+            {
+              "name": "domain",
+              "require": true,
+              "type": "string",
+              "value": "https://www.careerlink.vn"
+            },
+            {
+              "name": "checkExist",
+              "require": false,
+              "type": "bool",
+              "value": false
+            }
+          ]
+        },
+        {
+          "name": "storage",
+          "params": [
+            {
+              "name": "name",
+              "require": true,
+              "type": "string",
+              "value": "hbase"
+            }
+          ]
+        },
+        {
+          "name": "end",
+          "params": []
+        },
+        {
+          "name": "end",
+          "params": []
+        }
+      ],
+      "created_at": 1658391807,
+      "status": 0,
+      "active": 0,
+      "state": "STOP",
+      "host": "http://short-impala-61.abc.aicorporation.vn:3333"
+    },
+    {
+      "_id": "62d8f4c8cd2aaef5ef54cb66",
+      "name": "topcv",
+      "pipe_data": [
+        {
+          "name": "start-loop",
+          "params": [
+            {
+              "name": "t_sleep",
+              "require": true,
+              "type": "number",
+              "value": 600000
+            }
+          ]
+        },
+        {
+          "name": "start-visit",
+          "params": [
+            {
+              "name": "link",
+              "require": true,
+              "type": "string",
+              "value": "https://www.topcv.vn/tim-viec-lam-moi-nhat"
+            },
+            {
+              "name": "depth",
+              "require": true,
+              "type": "number",
+              "value": 5
+            },
+            {
+              "name": "domain",
+              "require": true,
+              "type": "string",
+              "value": "https://www.topcv.vn"
+            },
+            {
+              "name": "checkExist",
+              "require": false,
+              "type": "bool",
+              "value": false
+            }
+          ]
+        },
+        {
+          "name": "storage",
+          "params": [
+            {
+              "name": "name",
+              "require": true,
+              "type": "string",
+              "value": "hbase"
+            }
+          ]
+        },
+        {
+          "name": "end",
+          "params": []
+        },
+        {
+          "name": "end",
+          "params": []
+        }
+      ],
+      "created_at": 1658385608,
+      "status": 0,
+      "active": 1,
+      "state": "RUN",
+      "host": "http://red-impala-99.abc.aicorporation.vn:3333"
+    }
+  ],
+  "total": 27
+}
